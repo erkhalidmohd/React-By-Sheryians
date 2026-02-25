@@ -28,9 +28,11 @@ export const calculateTotal = (carItems) => {
   let totalPrice = 0;
   let totalitem = 0;
   carItems.map((item) => {
-    totalPrice += item.price * item.quantity;
-    totalitem += item.quantity;
+    totalPrice += item.price * item.qty;
+    totalitem += item.qty;
+    console.log(item);
   });
+  
   return {
     totalPrice,
     totalitem,
